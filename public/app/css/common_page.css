@@ -1,0 +1,250 @@
+.bgDark {
+    background-color: #1e2022;
+}
+.cstContainer{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: calc(100vh - 125px);
+}
+.appHeader {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #28343a;
+    padding: 15px 20px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #96a2b4;
+    background-color: #131517;
+    display: inline-block;
+}
+.app_header_logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.cstNav {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.cstNav .nav_items {
+    display: inline-block;
+    margin-left: 15px;
+}
+.cstNav .nav_items a{
+    font-size: 16px;
+    color: #96a2b4;
+}
+.cstNav .nav_items a:hover {
+    color: #2c95ff;
+    text-decoration: none;
+}
+.help_hero .brand img {
+    margin: 20px auto;
+    display: block;
+}
+.help_hero .card-wrapper .card__panel   {
+    background-color: #131517;
+    border: 1px solid#28343a;
+} 
+.help_hero .card-wrapper .card__panel .card-body {
+    padding: 30px;
+}  
+.card-wrapper {
+    width: 100%;
+    padding: 0 20px;
+}  
+.acTitle {
+    margin-right: 15px;
+    display: inline-block;
+    color: #96a2b4;
+    font-size: 17px;
+    font-weight: 400;
+}
+/* footer hero */
+.footer_hero {
+    margin: 60px 0 15px;
+}
+.footer_hero .list-inline li  {
+  display: inline-block;
+  margin: 0 5px;
+}
+.footer_hero .not_authftr {
+    margin-top: 4px;
+}  
+/* // footer hero */
+/* Faq page*/
+.rp_accord_main_wrapper{
+	text-align:center;
+}
+.rp_accord_box_wrapper{
+	width: 100%;
+    text-align: left;
+	display:inline-block;
+	border-radius: 5px; 
+   -moz-border-radius:5px;
+   -khtml-border-radius:5px;
+   margin-top: 15px;
+}
+.rp_accord_box_wrapper ul{
+  padding: 0;
+}
+.rp_accord_box_wrapper ul .accordion__submenu-item{
+  list-style: none;
+}
+.rp_accord_box_wrapper .card-body{
+  padding: 15px 20px;
+}
+.rp_accord_box_wrapper h4{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.rp_accord_box_wrapper .accordion__link{
+	background: #1e2022;
+    padding: 15px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+	cursor:pointer;
+	position:relative;
+	border:1px solid #4b505a;
+	border-top:0;
+}
+.rp_accord_box_wrapper .accordion__item:first-child .accordion__link{
+	border-top:1px solid #4b505a;
+}
+.rp_accord_box_wrapper .accordion__submenu{
+	border:1px solid#4b505a;
+	border-top:0;
+}
+.rp_accord_box_wrapper .accordion__link:after{
+	font-family: "FontAwesome";
+    font-weight: 900;
+    content: "\f106";
+    position: absolute;
+    font-size: 16px;
+	top: 15px;
+    right: 15px;
+    color: var(--color-white);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    transform: rotate(-180deg);
+}
+.rp_accord_box_wrapper .is-open .accordion__link:after{
+	top: 11px;
+	 -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+}
+.rp_accord_box_wrapper .accordion__submenu-item{
+    padding: 15px;
+    color: #96a2b4;
+    font-size: 15px;
+}
+.rp_accord_box_wrapper .accordion__submenu-item a{ 
+    margin: 15px 0;
+    display: inline-block;
+    width: 100%;
+}
+/* // Faq page*/
+/* Privacy Block */
+.privacyContent {
+    padding: 30px;
+}
+.privacyContent .card-title{
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  line-height: 30px;
+}
+.card-sub-heading {
+    color: #96a2b4;
+    text-align: center;
+    font-size: 18px;
+}
+.privacy_block {
+    margin-top: 20px;
+}
+.privacy_block p {
+    margin: 15px 0;
+    font-weight: 300;
+    line-height: 26px;
+    color: #96a2b4;
+    font-size: 14px;
+}
+.action_link {
+    font-size: 14px;
+}
+.privacy_list ul li {
+    color: #96a2b4;
+    font-size: 14px;
+}
+.privacy_h1, .privacy_h2, .privacy_h3, .privacy_h4, .privacy_h5, .privacy_h6 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+.contnet__ele .card-title {
+    color: #fff;
+}
+.privacy_list {
+    margin-bottom: 15px;
+  }
+.privacy_list ul {
+    list-style: disc;
+    padding-left: 15px;
+}
+/* // Privacy Block */
+.faq__list li {
+    margin-bottom: 6px;
+    display: block;
+    font-size: 14px;
+}
+.plan_faq {
+    line-height: 26px;
+}
+.plan_basic {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.cstFt {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #28343a;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #96a2b4;
+    background-color: #131517;
+}
+.cstFt p {
+  margin-bottom: 0;
+}
+ .privacyContent h4,.privacyContent p{
+    text-align: left !important;
+ }
+ ul.accordion__submenu.js-accordion-submenu img {
+    max-width: 870px;
+}
+
+/* media css */
+@media screen and (max-width: 575px) {
+    .app_header_logo {
+        font-size: 20px;  
+        margin-right: 0;  
+    }
+}
