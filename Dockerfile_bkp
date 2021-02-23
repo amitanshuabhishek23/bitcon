@@ -1,17 +1,42 @@
-FROM debian
+FROM alpine:edge
 
 WORKDIR /var/www/html/
 
+# Essentials
 RUN echo "UTC" > /etc/timezone
-RUN apt-get install --only-upgrade bash
-RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
-RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y php php-common
-RUN apt-get -y install php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd  php-mbstring php-curl php-xml php-pear php-bcmath
-RUN apt-get install -y zip unzip curl sqlite nginx supervisor
-RUN curl -sL https://deb.nodesource.com/setup_12.x
-RUN apt-get install -y nodejs
+RUN apk add --no-cache zip unzip curl sqlite nginx supervisor
 
+# Installing bash
+RUN apk add bash
+RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
+
+# Installing PHP
+RUN apk add --no-cache php \
+    php-common \
+    php-fpm \
+    php-pdo \
+    php-opcache \
+    php-zip \
+    php-phar \
+    php-iconv \
+    php-cli \
+    php-curl \
+    php-openssl \
+    php-mbstring \
+    php-tokenizer \
+    php-fileinfo \
+    php-json \
+    php-xml \
+    php-xmlwriter \
+    php-simplexml \
+    php-dom \
+    php-pdo_mysql \
+    php-pdo_sqlite \
+    php-tokenizer \
+    npm \
+
+# Installing composer
+    php7-pecl-redis
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN rm -rf composer-setup.php
@@ -38,15 +63,23 @@ RUN touch /run/nginx/nginx.pid
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
+RUN npm install
 # Build process
 COPY . /var/www/html/
-
+# RUN composer install --no-dev
+#RUN php composer.json install
+# RUN pwd
+# RUN ls
 RUN composer update -n
 RUN php artisan key:generate --force
 RUN php artisan migrate:fresh --force
 RUN php artisan db:seed --force
+#RUN npm install
+# RUN node -v
+# RUN npm -v
 RUN php artisan passport:install --force
-
+RUN npm install
 # Container execution
 EXPOSE 3000
-CMD [ "php", "artisan", "serve", "--host=0.0.0.0" ]
+CMD [ "php", "artisan" , "serve" ]
+#CMD ["supervisord", "-c", "/etc/supervisor.d/supervisord.ini"]
